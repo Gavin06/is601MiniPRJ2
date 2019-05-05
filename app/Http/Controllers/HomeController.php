@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -25,6 +25,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index()
     {
         return view('home');
@@ -35,40 +36,31 @@ class HomeController extends Controller
         return view('about');
     }
 
-
+    public function contact()
+    {
+        return view('contact');
+    }
 
     public function test()
     {
-        $user = Auth::user();
+        //$users = Auth::user();
 
-        //$user = User::find(3);
+        $user = User::find(15);
 
         //$user->delete();
 
-        //$users = User::all();
-        /*
-                 $users = User::where('id', 1)
-                    ->orderBy('name', 'desc')
-                    ->take(2)
-                    ->get();
-        */
-        //$users = DB::table('users')->get();
+        //$user = User::all();
 
-        //dd($user->cars());
+        //$user = DB::table('cars')->get();
 
         $users = $user->cars;
 
-        //dd($users);
+        //dd($users->cars());
+
+        //dd($user->count());
 
         return view('test', ['variables' => $users]);
     }
 
-    /*
-     @foreach ($variables as $variable)
-                            <h2>User {{ $variable->id }}</h2>
-                            <p>Name: {{ $variable->name }}</p>
-                            <p>Email: {{ $variable->email }}</p>
-                            <p>Password: {{$variable->password }}</p>
-                        @endforeach
-      */
+
 }
