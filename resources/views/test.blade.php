@@ -16,11 +16,13 @@
 
                         Test Page
 
+
+
                         @foreach ($variables as $variable)
-                            <h2>User {{ $variable->id }}</h2>
-                            <p>Name: {{ $variable->name }}</p>
-                            <p>Email: {{ $variable->email }}</p>
-                            <p>Password: {{$variable->password }}</p>
+                            <h2>Car: {{ $variable->id }}</h2>
+                            <p>Make:{{ $variable->make }}</p>
+                            <p>Model:{{ $variable->model }}</p>
+                            <p>Year:{{ $variable->year }}</p>
                         @endforeach
                     </div>
                 </div>
