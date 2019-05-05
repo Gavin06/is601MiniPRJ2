@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -24,5 +26,27 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function test()
+    {
+        //$user = Auth::user();
+
+        //$user = User::find(3);
+
+        //$user->delete();
+
+        //$users = User::all();
+
+
+        $users = User::where('id', 1)
+            ->orderBy('name', 'desc')
+            ->take(2)
+            ->get();
+
+
+        dd($users->count());
+
+        return view('test', ['variables' => $users]);
     }
 }
