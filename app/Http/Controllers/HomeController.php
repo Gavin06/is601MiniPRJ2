@@ -30,6 +30,13 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function about()
+    {
+        return view('about');
+    }
+
+
+
     public function test()
     {
         $user = Auth::user();
@@ -56,5 +63,12 @@ class HomeController extends Controller
         return view('test', ['variables' => $users]);
     }
 
-
+    /*
+     @foreach ($variables as $variable)
+                            <h2>User {{ $variable->id }}</h2>
+                            <p>Name: {{ $variable->name }}</p>
+                            <p>Email: {{ $variable->email }}</p>
+                            <p>Password: {{$variable->password }}</p>
+                        @endforeach
+      */
 }
