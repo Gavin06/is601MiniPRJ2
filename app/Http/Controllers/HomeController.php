@@ -47,19 +47,14 @@ class HomeController extends Controller
         */
         //$users = DB::table('users')->get();
 
-        dd($user->cars());
+        //dd($user->cars());
+
+        $users = $user->cars;
 
         //dd($users);
 
         return view('test', ['variables' => $users]);
     }
 
-    /*
-     @foreach ($variables as $variable)
-                            <h2>User {{ $variable->id }}</h2>
-                            <p>Name: {{ $variable->name }}</p>
-                            <p>Email: {{ $variable->email }}</p>
-                            <p>Password: {{$variable->password }}</p>
-                        @endforeach
-      */
+
 }
