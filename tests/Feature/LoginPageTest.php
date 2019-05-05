@@ -6,7 +6,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class loginPageAccessTest extends TestCase
+class loginPageTest extends TestCase
 {
     /**
      * A basic feature test for the login page accessibility.

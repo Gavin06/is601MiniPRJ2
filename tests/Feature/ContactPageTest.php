@@ -6,16 +6,16 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class AboutPageTest extends TestCase
+class contactPageAccessTest extends TestCase
 {
     /**
-     * A basic feature test to verify the about page exists.
+     * A basic feature test to verify the contact page is accessible.
      *
      * @return void
      */
     public function testExample()
     {
-        $response = $this->get('/about');
+        $response = $this->get('/contact');
 
         $response->assertStatus(200);
     }
