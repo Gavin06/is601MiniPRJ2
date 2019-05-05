@@ -6,7 +6,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class contactPageAccessTest extends TestCase
+class ContactPageTest extends TestCase
 {
     /**
      * A basic feature test to verify the contact page is accessible.
