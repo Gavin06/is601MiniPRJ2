@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
@@ -36,16 +38,18 @@ class HomeController extends Controller
 
         //$user->delete();
 
-        //$users = User::all();
+        $users = User::all();
 
+        /*
+                 $users = User::where('id', 1)
+                    ->orderBy('name', 'desc')
+                    ->take(2)
+                    ->get();
+        */
 
-        $users = User::where('id', 1)
-            ->orderBy('name', 'desc')
-            ->take(2)
-            ->get();
+        //$users = DB::table('users')->get();
 
-
-        dd($users->count());
+        //dd($users);
 
         return view('test', ['variables' => $users]);
     }
