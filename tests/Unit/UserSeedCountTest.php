@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\User;
 
-class UserSeedCountTest extends TestCase
+class userSeedCountTest extends TestCase
 {
     /**
      * A basic unit test example to verify the user count is 50.

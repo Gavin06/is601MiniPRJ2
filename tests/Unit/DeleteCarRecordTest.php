@@ -2,13 +2,13 @@
 
 namespace Tests\Unit;
 
-use App\Cars;
+use App\Car;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class DeleteCarRecordTest extends TestCase
+class deleteCarRecordTest extends TestCase
 {
     /**
      * A basic unit test to delete a random car.
@@ -19,7 +19,7 @@ class DeleteCarRecordTest extends TestCase
 
     public function testDeleteCar()
     {
-        $car = Cars::inRandomOrder()->first();
+        $car = Car::inRandomOrder()->first();
 
         $car->delete();
 

@@ -2,30 +2,28 @@
 
 namespace Tests\Unit;
 
-use App\Cars;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Car;
 
-class CarMakeTest extends TestCase
+class carMakeTest extends TestCase
 {
     /**
-     * A basic unit test to verify that the Car brands are limited to
-     * Ford, Honda, or Toyota.
+     * A basic unit test example.
      *
      * @return void
      */
-    public function testCarMake()
 
-    {
-        $car=Cars::InRandomOrder()->first();
+    public function testCarMakeEqualsValue() {
 
+        $record = Car::inRandomOrder()->first();
 
-        $carMake=$car->brand;
-
-
-        $this->assertContains($carMake, ['Honda', 'Ford', 'Toyota']);
-
-
+        $this->assertThat(
+            $record->make,
+            $this->logicalOr(
+                $this->equalTo('ford'),
+                $this->equalTo('honda'),
+                $this->equalTo('toyota')));
     }
 }

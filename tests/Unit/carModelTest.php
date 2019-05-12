@@ -7,23 +7,20 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class carYearUpdateTest extends TestCase
+class carModelTest extends TestCase
 {
     /**
-     * A basic unit test that updates a random cars year to 2000
+     * A basic unit test that verifies the model is a type string.
      *
      * @return void
      */
-    public function testUpdateCarYear()
-
+    public function testCarModel()
 
     {
-
         $car = Car::inRandomOrder()->first();
-        $car->year = '2000';
-        $car->save();
 
 
-        $this->assertTrue($car->save());
+        $this->assertIsString($car->model);
+
     }
 }

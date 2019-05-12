@@ -9,7 +9,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\User;
 
-class NewUserTest extends TestCase
+class newUserTest extends TestCase
 {
 
     /**

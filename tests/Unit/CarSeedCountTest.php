@@ -5,9 +5,9 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use App\Cars;
+use App\Car;
 
-class CarSeedCountTest extends TestCase
+class carSeedCountTest extends TestCase
 {
     /**
      * A basic unit test that verify that the number of
@@ -17,7 +17,7 @@ class CarSeedCountTest extends TestCase
      */
     public function testCarSeedCount()
     {
-        $cars = Cars::All();
+        $cars = Car::All();
 
         $carCount = $cars->count();
 

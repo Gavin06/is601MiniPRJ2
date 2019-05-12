@@ -7,10 +7,10 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use App\Cars;
+use App\Car;
 use App\User;
 
-class CreateNewCarTest extends TestCase
+class createNewCarTest extends TestCase
 {
     /**
      * A basic unit test example.
@@ -26,7 +26,7 @@ class CreateNewCarTest extends TestCase
         $cars = factory(User::class, 1)
             ->create()
             ->each(function ($u) {
-                $u->cars()->save(factory(Cars::class)->make());
+                $u->cars()->save(factory(Car::class)->make());
 
                 $this->assertTrue($u->save());
             });

@@ -8,11 +8,11 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class DeleteUserTest extends TestCase
+class deleteUserTest extends TestCase
 {
     /**
      * A basic unit test that deletes a user from the database
-     *
+     * Using DatabaseTransaction restores the database after the test is run.
      *
      * @return void
      *

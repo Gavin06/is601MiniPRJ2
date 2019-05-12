@@ -7,7 +7,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class UpdateUserTest extends TestCase
+class updateUserTest extends TestCase
 {
     /**
      * A basic unit test that tests updating a user's email and username in

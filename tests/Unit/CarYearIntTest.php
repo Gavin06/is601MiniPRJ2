@@ -2,12 +2,12 @@
 
 namespace Tests\Unit;
 
-use App\Cars;
+use App\Car;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class CarYearIntTest extends TestCase
+class carYearIntTest extends TestCase
 {
     /**
      * A basic unit test to see if the Car year is stored
@@ -19,12 +19,11 @@ class CarYearIntTest extends TestCase
     public function testCarYearInteger()
 
     {
-        $car = Cars::inRandomOrder()->first();
 
-        //dd($user);
-
-        $this->assertIsInt($car->year);
-
+        $car = Car::inRandomOrder()->first();
+       $this->assertThat($car->year, $this->isType('string'),
+         //   $this->greaterThan(0)
+       );
 
     }
 }
